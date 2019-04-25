@@ -1,0 +1,32 @@
+{
+    "name": "Pure Vanilla",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Auto-voting and server news",
+    "homepage_url": "https://purevanilla.es/",
+    "icons": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    },
+    "default_locale": "en",
+    "background": {
+      "scripts": [
+        "src/temporary/main.js"
+      ],
+      "persistent": false
+    },
+    "permissions": [
+      "https://*/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://*/*"
+        ],
+        "js": [
+          "src/votingcheck/main.js"
+        ]
+      }
+    ]
+  }
